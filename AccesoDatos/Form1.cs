@@ -20,5 +20,28 @@ namespace AccesoDatos
                 MessageBox.Show("Error de Conexion");
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAutors autors = new frmAutors();
+            autors.Show();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            frmEmpleados Empleados = new frmEmpleados();
+            Empleados.Show();
+        }
+
+        private void btnTitles_Click(object sender, EventArgs e)
+        {
+            frmTitulos Titulos = new frmTitulos();
+            Titulos.Show();
+        }
     }
 }

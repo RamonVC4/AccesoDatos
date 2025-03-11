@@ -20,7 +20,9 @@ namespace AccesoDatos
         private void frmAutors_Load(object sender, EventArgs e)
         {
             Datos obj = new Datos();
-            DataSet ds = obj.consulta("Select * from authors");
+            DataSet ds = obj.consulta("Select au_id as [Authors ID], au_lname as [Last Name]," +
+                " au_FName as [Fist Name], phone as Phone, address as Address, city as City," +
+                " state as State, zip as Zip, contract as Constract from authors");
 
             if (ds != null)
             {
@@ -63,7 +65,16 @@ namespace AccesoDatos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            frmInsertarAuthors autors = new frmInsertarAuthors();
+            autors.Show();
+            this.Close();
+        }
 
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 menu = new Form1();
+            menu.Show();
+            this.Close();
         }
     }
 }
